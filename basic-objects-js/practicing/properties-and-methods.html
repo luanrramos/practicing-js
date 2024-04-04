@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ativo {
+      background-color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn" onclick="clip()">Click</button>
+  <input type="text" value="Hello Worlddadawwd" id="myInput">
+  <script>
+    //3 names for properties and strings methods
+
+    var name = "Luan";
+
+    // console.log(name.toUpperCase());
+    // console.log(name.toLowerCase());
+    // console.log(name.hasOwnProperty());
+    // console.log(name.lenght);
+    // console.log(name.charAt(2));
+    // console.log(name.indexOf("n"));
+
+
+    //5 names of properties and methods of dom elements
+
+    // var botao = document.querySelector(".btn");
+
+    // botao.addEventListener("click", function () {
+    //   botao.innerText = ("Clicou!");
+    //   botao.style.color = "red";
+
+    //   botao.classList.add("ativo")
+    //   console.log(botao);
+    // })
+
+
+
+    // busque na web um objeto (método) capaz de interagir com o clipboard, 
+    // clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
+
+
+    function clip() {
+      manipulatingClip = document.querySelector("input");
+
+      manipulatingClip.select();
+      navigator.clipboard.writeText(manipulatingClip.value);
+    }
+  </script>
+</body>
+
+</html>
