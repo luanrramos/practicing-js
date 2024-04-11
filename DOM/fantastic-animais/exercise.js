@@ -7,7 +7,8 @@ const imagem = document.querySelectorAll('[src^="img/imagem"]');
 const internLinks = document.querySelectorAll('[href^="#"]');
 
 // Selecione o primeiro h2 dentro de .animais-descricao
-const firstH2 = document.querySelector(".grid-content-desc span").innerHTML;
+const firstH2 = document.querySelector(".grid-content-desc span");
+
 // Selecione o último p do site
 
 const p = document.getElementsByTagName("p");
