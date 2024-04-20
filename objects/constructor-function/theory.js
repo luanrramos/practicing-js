@@ -1,3 +1,12 @@
+function Carros(marca, preco) {
+  this.marca = marca;
+  this.preco = preco;
+  
+}
+
+const fiat = new Carros("fiat", 2000);
+const honda = new Carros("honda", 2000);
+
 // function Carros2(marcaAtribuida, precoFinal) {
 //   const taxa = 1.2;
 //   this.preco = precoFinal * taxa;
@@ -52,18 +61,18 @@
 
 // const liLast = new Dom("li:last-child");
 
-const dom = {
-  seletor: "li",
+// const dom = {
+//   seletor: "li",
 
-  element() {
-    return document.querySelector(this.seletor);
-  },
+//   element() {
+//     return document.querySelector(this.seletor);
+//   },
 
-  ativar() {
-    this.element().classList.add("ativar");
-    return "Adicionado!!!";
-  },
-};
+//   ativar() {
+//     this.element().classList.add("ativar");
+//     return "Adicionado!!!";
+//   },
+// };
 
 function Dom(seletor) {
   this.element = function () {
