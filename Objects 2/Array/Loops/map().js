@@ -34,12 +34,38 @@ const aulas = [
   },
 ];
 
-const titulo = function(aula){
-  return aula.nome
-}
+const titulo = function (aula) {
+  return aula.nome;
+};
 
 const aulasNome = aulas.map((nomeAula) => titulo);
 
 const aulasMin = aulas.map((aula, index) => {
   return aula.min;
+});
+
+// const carros = ['Ford', 'Fiat', 'Honda'];
+const newCarros = carros.map((item) => {
+  const novoValor = "Carro " + item;
+  return novoValor;
+});
+const novoValor = "Teste";
+newCarros; // [undefined, undefined, undefined];
+
+
+// Example 02 - Rocket sum
+const rockets = [
+  { country: "Russia", launches: 32 },
+  { country: "US", launches: 23 },
+  { country: "China", launches: 16 },
+  { country: "Europe", launches: 7 },
+  { country: "India", launches: 4 },
+  { country: "Japan", launches: 3 },
+];
+
+// Map()
+
+const rocketMap = rockets.map((country) => {
+  // cont += country.launches;
+  return null;
 });
