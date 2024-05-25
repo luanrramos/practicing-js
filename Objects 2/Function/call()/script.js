@@ -34,12 +34,12 @@
 // EXEMPLO REAL
 // O objeto atribuído a lista será o substituído pelo primeiro argumento de call()
 
-function Dom(seletor) {
-  this.element = document.querySelector(seletor);
-  this.ativo = function (classe) {
-    this.element.classList.add(classe);
-  };
-}
+// function Dom(seletor) {
+//   this.element = document.querySelector(seletor);
+//   this.ativo = function (classe) {
+//     this.element.classList.add(classe);
+//   };
+// }
 
 // Dom.prototype.ativo = function (classe) {
 //   this.element.classList.add(classe);
@@ -51,18 +51,38 @@ function Dom(seletor) {
 
 // Example 01 - call
 
-const jogo = {
-  nome: "GTA",
-  ano: 2024,
+// const jogo = {
+//   nome: "GTA",
+//   ano: 2024,
+// };
+
+// const carro = {
+//   nome: "Toyota",
+//   ano: 2000,
+
+//   trocarNome: function (nome) {
+//     return (this.nome = nome);
+//   },
+// };
+
+// const trocarNomeJogo = carro.trocarNome.bind(jogo, "Teste");
+
+function Dom(seletor) {
+  this.element = document.querySelector(seletor);
+}
+
+Dom.prototype.ativar = function (classe) {
+  this.element.classList.add(classe);
 };
 
-const carro = {
-  nome: "Toyota",
-  ano: 2000,
+const ul = new Dom("ul");
+ul.ativar("ativar");
 
-  trocarNome: function (nome) {
-    return (this.nome = nome);
-  },
+const hondaObj = {
+  marca: "Honda",
+  ano: 1920,
 };
 
-const trocarNomeJogo = carro.trocarNome.bind(jogo, "Teste");
+function descricaoCarro(marca, ano) {
+  console.log(this + " " + this.ano);
+}
