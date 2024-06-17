@@ -1,56 +1,68 @@
-// Example 02 - Rocket sum
-const rockets = [
-  { country: "Russia", launches: 32 },
-  { country: "US", launches: 23 },
-  { country: "China", launches: 16 },
-  { country: "Europe", launches: 7 },
-  { country: "India", launches: 4 },
-  { country: "Japan", launches: 3 },
+// // Example 02 - Rocket sum
+// const rockets = [
+//   { country: "Russia", launches: 32 },
+//   { country: "US", launches: 23 },
+//   { country: "China", launches: 16 },
+//   { country: "Europe", launches: 7 },
+//   { country: "India", launches: 4 },
+//   { country: "Japan", launches: 3 },
+// ];
+
+// // Reduce
+
+// const rocketReduce = rockets.reduce(
+//   (cont, proxElem) => cont + proxElem.launches,
+//   0
+// );
+
+// // Reduce Example 02
+
+// const grades = [75, 50, 90, 80, 65, 95];
+
+// const gradesReduce = grades.reduce((acc, proxElement) => acc + proxElement);
+// // ---------------------------------------------------------------------------------------
+// const aulas = [
+//   {
+//     nome: "HTML 1",
+//     min: 15,
+//   },
+//   {
+//     nome: "HTML 2",
+//     min: 10,
+//   },
+//   {
+//     nome: "CSS 1",
+//     min: 20,
+//   },
+//   {
+//     nome: "JS 1",
+//     min: 25,
+//   },
+// ];
+
+// const nomeAulas = aulas.reduce((anterior, atual, index) => {
+//   anterior[index] = atual.min;
+//   return anterior;
+// }, {});
+
+// //  ------------------------------------------------------------------------------
+
+// const frutas = ['Banana', 'Pêra', 'Uva'];
+
+// const frutasRight = frutas.reduceRight((acc, fruta) => acc + ' ' + fruta);
+// const frutasLeft = frutas.reduce((acc, fruta) => acc + ' ' + fruta);
+
+// frutasRight; // Uva Pêra Banana
+// frutasLeft; // Banana Pêra Uva
+
+let ordens = [
+  { nome: "Alberto", quantidade: 14, idade: 33 },
+  { nome: "Pedro", quantidade: 32, idade: 33 },
+  { nome: "Douglas", quantidade: 24, idade: 33 },
 ];
 
-// Reduce
+let somaOrdens = ordens.reduce(function (acc, ordem) {
+  return acc + ordem.quantidade;
+}, 0);
 
-const rocketReduce = rockets.reduce(
-  (cont, proxElem) => cont + proxElem.launches,
-  0
-);
-
-// Reduce Example 02
-
-const grades = [75, 50, 90, 80, 65, 95];
-
-const gradesReduce = grades.reduce((acc, proxElement) => acc + proxElement);
-// ---------------------------------------------------------------------------------------
-const aulas = [
-  {
-    nome: "HTML 1",
-    min: 15,
-  },
-  {
-    nome: "HTML 2",
-    min: 10,
-  },
-  {
-    nome: "CSS 1",
-    min: 20,
-  },
-  {
-    nome: "JS 1",
-    min: 25,
-  },
-];
-
-const nomeAulas = aulas.reduce((anterior, atual, index) => {
-  anterior[index] = atual.min;
-  return anterior;
-}, {});
-
-//  ------------------------------------------------------------------------------
-
-const frutas = ['Banana', 'Pêra', 'Uva'];
-
-const frutasRight = frutas.reduceRight((acc, fruta) => acc + ' ' + fruta);
-const frutasLeft = frutas.reduce((acc, fruta) => acc + ' ' + fruta);
-
-frutasRight; // Uva Pêra Banana
-frutasLeft; // Banana Pêra Uva
+console.log(somaOrdens); // Sima das quantidades

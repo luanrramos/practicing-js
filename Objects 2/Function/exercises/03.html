@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 01</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    div {
+      background-color: yellow;
+    }
+
+    .azul {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="margin: 0 auto; width: 250px; height: 200px;">
+
+  </div>
+
+  </script>
+  <script>
+    // Com addEventListener
+
+    const quadrado = document.querySelector("div")
+    quadrado.addEventListener("click", addCorAzul);
+
+    function addCorAzul() {
+      quadrado.classList.toggle("azul")
+    }
+  </script>
+</body>
+
+</html>

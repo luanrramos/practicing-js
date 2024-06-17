@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 01</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    div {
+      background-color: yellow;
+    }
+
+    .normal {
+      border: 1px solid #ccc;
+      /* Cor normal da borda */
+    }
+
+    .border-azul {
+      border: 1px solid blue;
+    }
+  </style>
+</head>
+
+<body>
+  <input style=" float: right;" type="text">
+
+  <script>
+
+    const input = document.querySelector("input")
+    console.log(typeof (input.value))
+    input.addEventListener("input", () => {
+      if (input.value !== "") {
+
+        input.classList.remove("normal")
+        input.classList.add("border-azul")
+      } else {
+        input.classList.remove("border-azul")
+        input.classList.add("normal")
+      }
+    })
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 01</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .azul {
+      background-color: blue;
+    }
+
+    .vermelho {
+      background-color: red;
+    }
+
+    .amarelo {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="primary" style="margin: 0 auto; display: flex; flex-direction: column; width: 250px;">
+    <div style="width: 250px; height: 200px;" class="azul">
+
+    </div>
+    <div class = "vermelho" style="width: 250px; height: 200px; ">
+
+    </div>
+    <button onclick=" trocarCor()">Trocar de cor</button>
+  </div>
+  </script>
+  <script>
+    function trocarCor() {
+      const quadradoAzul = document.querySelector(".primary div")
+      console.log(quadradoAzul.classList);
+      quadradoAzul.classList.add("amarelo");
+    }
+  </script>
+</body>
+
+</html>

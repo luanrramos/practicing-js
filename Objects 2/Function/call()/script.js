@@ -67,22 +67,34 @@
 
 // const trocarNomeJogo = carro.trocarNome.bind(jogo, "Teste");
 
-function Dom(seletor) {
-  this.element = document.querySelector(seletor);
+// function Dom(seletor) {
+//   this.element = document.querySelector(seletor);
+// }
+
+// Dom.prototype.ativar = function (classe) {
+//   this.element.classList.add(classe);
+// };
+
+// const ul = new Dom("ul");
+// ul.ativar("ativar");
+
+// const hondaObj = {
+//   marca: "Honda",
+//   ano: 1920,
+// };
+
+// function descricaoCarro(marca, ano) {
+//   console.log(this + " " + this.ano);
+// }
+window.marca = "Audi"
+window.ano = 2000
+function descricaoCarro() {
+  console.log(this);
+  console.log(this.marca + " " + this.ano);
 }
 
-Dom.prototype.ativar = function (classe) {
-  this.element.classList.add(classe);
-};
+descricaoCarro(); // Audio 2000
 
-const ul = new Dom("ul");
-ul.ativar("ativar");
+descricaoCarro.call({marca: "Ferrari", ano: 2024}); // Ferrari 2024
 
-const hondaObj = {
-  marca: "Honda",
-  ano: 1920,
-};
-
-function descricaoCarro(marca, ano) {
-  console.log(this + " " + this.ano);
-}
+// Com o call, referenciamos outro objetivo para atuar como THIS da função
