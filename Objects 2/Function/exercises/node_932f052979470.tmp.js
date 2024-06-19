@@ -80,21 +80,21 @@ function mediaComFor(media) {
   return acc / (data.length - 1);
 }
 
-function mediaFilhos() {
-  let acc = 0;
+function mediaFilhos(){
+  let acc = 0
   for (familia of data) {
     acc += familia.qntFilhos;
   }
-  let mediaFilhos = acc / (data.length - 1);
+  let mediaFilhos = acc / (data.length-1);
   return mediaFilhos;
 }
 
-function maiorSalario() {
-  for (let i = 0; i = data.length; i++) {
-    console.log(data[i].salario);
+function maiorSalario(){
+  for (let i = 0; i = data.length; i++){
+    console.log(data.salario)
   }
 }
-maiorSalario();
+maiorSalario()
 // console.log(`A média salarial da população é de: ${mediaComFor()} R$`);
 // console.log(`A média de filhos da população é de: ${mediaFilhos()}`);
 
@@ -114,12 +114,15 @@ function mediaComFE() {
 //Com o map()
 function mediaComMap() {
   let acc = 0;
-  data.map((familia) => {
-    if (familia.salario > 0) {
+    data.map((familia) => {
+    if (familia.salario > 0){
       acc += familia.salario;
     }
   });
   let media = acc / (data.length - 1);
-  return media;
+  return media
 }
 //  console.log(`A média salarial da população é de: ${mediaComMap()} R$`);
+
+
+
