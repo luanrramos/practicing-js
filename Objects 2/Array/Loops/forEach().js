@@ -32,11 +32,44 @@ const rocketMap = rockets.map((country) => {
 
 // Reduce
 
-const rocketReduce = rockets.reduce((cont, proxElem) => cont + proxElem.launches, 0);
-
+const rocketReduce = rockets.reduce(
+  (cont, proxElem) => cont + proxElem.launches,
+  0
+);
 
 // Reduce Example 02
 
 const grades = [75, 50, 90, 80, 65, 95];
 
-const gradesReduce = grades.reduce((acc, proxElement) => acc + proxElement)
+const gradesReduce = grades.reduce((acc, proxElement) => acc + proxElement);
+
+const students = [
+  {
+    name: "Carla",
+    age: 32,
+  },
+  {
+    name: "Joao",
+    age: 12,
+  },
+  {
+    name: "Gabriel",
+    age: 15,
+  },
+  {
+    name: "Paulo",
+    age: 42,
+  },
+  {
+    name: "Giovanna",
+    age: 61,
+  },
+];
+
+const newArrayMap = students.map((student) => {
+  return student.age * 2;
+});
+
+console.log(newArrayMap);
+
+

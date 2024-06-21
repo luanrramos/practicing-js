@@ -79,4 +79,28 @@ let pessoasComIdade33 = pessoas.map((pessoa) => {
   return pessoa.nome;
 });
 
-console.log(pessoasComIdade33);
+// console.log(pessoasComIdade33);
+
+const numbers = [2, 3, 1, 5];
+
+//Forma 1
+const double0 = numbers.map(function (number) {
+  return number * 2;
+});
+
+//Forma 2
+const double1 = numbers.map((number) => {
+  return number * 2;
+});
+
+//Forma 3
+// Aninhando maps
+const double = number => number * 2;
+const sum = function (number){
+ return number + 10
+}
+
+const double2 = numbers.map(double).map((number) => number + 10);
+
+
+console.log(double2);
