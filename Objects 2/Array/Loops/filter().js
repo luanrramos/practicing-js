@@ -20,4 +20,34 @@ let pessoasComIdade33 = pessoas.filter((pessoa) => {
   }
 });
 
-console.log(pessoasComIdade33);
+// console.log(pessoasComIdade33);
+
+const list = [20, 3, 234, 12, 17, 541, 6, 78, 131, 1, 25, 1000];
+
+const filterList = list.filter((number) => {
+  if (number % 2 === 0 && number % 5 === 0) return true;
+});
+
+console.log(list);
+console.log(filterList);
+
+const companies = [
+  { name: "Samsung", marketValue: 50, CEO: "Kim Huyn Suk", foundedOn: 1938 },
+  {
+    name: "Microsoft",
+    marketValue: 415,
+    CEO: "Satya Nadella",
+    foundedOn: 1975,
+  },
+  { name: "Intel", marketValue: 117, CEO: "Brian Krzanich", foundedOn: 1968 },
+  { name: "Facebook", marketValue: 383, CEO: "Mark zuckberg", foundedOn: 2004 },
+  { name: "Spotify", marketValue: 30, CEO: "Daniel Ek", foundedOn: 2006 },
+  { name: "Apple", marketValue: 845, CEO: "Tim Cook", foundedOn: 1976 },
+];
+
+const companiesFilter = companies.filter((company) => {
+  if (company.foundedOn > 1975 && company.marketValue > 200) return true;
+  else return false
+});
+
+console.log(companiesFilter);

@@ -69,38 +69,91 @@
 //   return null;
 // });
 
-let pessoas = [
-  { nome: "Alberto", idade: 33 },
-  { nome: "Pedro", idade: 33 },
-  { nome: "Ana", idade: 12 },
-];
+// let pessoas = [
+//   { nome: "Alberto", idade: 33 },
+//   { nome: "Pedro", idade: 33 },
+//   { nome: "Ana", idade: 12 },
+// ];
 
-let pessoasComIdade33 = pessoas.map((pessoa) => {
-  return pessoa.nome;
-});
+// let pessoasComIdade33 = pessoas.map((pessoa) => {
+//   return pessoa.nome;
+// });
 
 // console.log(pessoasComIdade33);
 
-const numbers = [2, 3, 1, 5];
+// const numbers = [2, 3, 1, 5];
 
 //Forma 1
-const double0 = numbers.map(function (number) {
-  return number * 2;
-});
+// const double0 = numbers.map(function(number) {
+//   return number * 2;
+// });
 
 //Forma 2
-const double1 = numbers.map((number) => {
-  return number * 2;
+// const double1 = numbers.map((number) => {
+//   return number * 2;
+// });
+
+// //Forma 3
+// // Aninhando maps
+// const double = number => number * 2;
+// const sum = function (number){
+//  return number + 10
+// }
+
+// const double2 = numbers.map(double).map((number) => number + 10);
+
+// console.log(double2);
+
+const numbers = [40, 100, 1, 5, 25, 10];
+numbers.sort();
+// console.log(numbers);
+
+//Exercise 01
+const list = [
+  { name: "Rodolfo", vip: true },
+  { name: "Maria", vip: false },
+  { name: "João", vip: true },
+  { name: "Bruno", vip: true },
+  { name: "Carla", vip: false },
+  { name: "Ana", vip: true },
+  { name: "Julio", vip: false },
+];
+
+const newList = list.map((item) => {
+  const newList = [
+    {
+      name: item.name,
+      vip: item.vip,
+      sector: item.vip ? "Black" : "Green"
+    }
+  ]
+  
+  return newList;
 });
 
-//Forma 3
-// Aninhando maps
-const double = number => number * 2;
-const sum = function (number){
- return number + 10
-}
+// console.log(list);
+// console.log(newList);
 
-const double2 = numbers.map(double).map((number) => number + 10);
+const students = [
+  { name: "Rodolfo", testGrade: 8 },
+  { name: "Maria", testGrade: 5 },
+  { name: "João", testGrade: 6 },
+  { name: "Bruno", testGrade: 8 },
+  { name: "Carla", testGrade: 7 },
+  { name: "Ana", testGrade: 10 },
+  { name: "Julio", testGrade: 2 },
+];
 
+const finalResult = students.map(student => {
+  const finalResult = [
+    {
+      name: student.name,
+      finalResult: student.testGrade >= 7 ? "Approved" : "Desapproved"
+    }
+  ]
+  
+  return finalResult;
+});
 
-console.log(double2);
+console.log(students);
+console.log(finalResult);
