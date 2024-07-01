@@ -124,10 +124,10 @@ const newList = list.map((item) => {
     {
       name: item.name,
       vip: item.vip,
-      sector: item.vip ? "Black" : "Green"
-    }
-  ]
-  
+      sector: item.vip ? "Black" : "Green",
+    },
+  ];
+
   return newList;
 });
 
@@ -144,16 +144,33 @@ const students = [
   { name: "Julio", testGrade: 2 },
 ];
 
-const finalResult = students.map(student => {
+const finalResult = students.map((student) => {
   const finalResult = [
     {
       name: student.name,
-      finalResult: student.testGrade >= 7 ? "Approved" : "Desapproved"
-    }
-  ]
-  
+      finalResult: student.testGrade >= 7 ? "Approved" : "Desapproved",
+    },
+  ];
+
   return finalResult;
 });
 
-console.log(students);
-console.log(finalResult);
+// console.log(students);
+
+// console.log(finalResult);
+
+const botao = document.querySelector("button");
+const input = document.querySelector("input");
+
+function funcao() {
+  alert("Pressionado");
+  input.value = "";
+}
+
+function valueInput() {
+  console.log(input.value);
+}
+// botao.addEventListener("click", funcao);
+
+botao.onclick = funcao;
+input.addEventListener("keypress", valueInput);

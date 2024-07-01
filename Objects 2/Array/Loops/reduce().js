@@ -86,10 +86,28 @@ const pib = companies.reduce((acc, company) => {
   return acc + company.marketValue;
 }, 0);
 
-console.log(pib);
+// console.log(pib);
 
 //Forma 2
 
 
 const pib2 = companies.reduce((acc, company) => acc + company.marketValue, 0);
-console.log(pib2)
+// console.log(pib2)
+
+// Somar 10% do valor de cada marketValue para cada empresa - COM MAP
+// Filtrar empresas < 2000 - COM FILTER
+// Somar o valor das empresas - COM REDUCE
+
+const add10Percentage = company => {
+  company.marketValue += (company.marketValue * 0.1)
+  return company
+}
+
+const companiesUnder2000 = company => company.foundedOn < 2000;
+
+const sumMarketValue = (acc, company) => acc + company.marketValue
+
+const myBestCompanies = companies.map(add10Percentage).filter(companiesUnder2000).reduce(sumMarketValue, 0)
+
+
+console.log(myBestCompanies)
