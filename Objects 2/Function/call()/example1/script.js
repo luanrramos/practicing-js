@@ -86,8 +86,13 @@
 // function descricaoCarro(marca, ano) {
 //   console.log(this + " " + this.ano);
 // }
-window.marca = "Audi"
-window.ano = 2000
+window.marca = "Audi";
+window.ano = 2000;
+
+const referencia = {
+  marca: "Ferrari",
+  ano: 2015,
+};
 function descricaoCarro() {
   console.log(this);
   console.log(this.marca + " " + this.ano);
@@ -95,6 +100,6 @@ function descricaoCarro() {
 
 descricaoCarro(); // Audio 2000
 
-descricaoCarro.call({marca: "Ferrari", ano: 2024}); // Ferrari 2024
+descricaoCarro.call(referencia); // Ferrari 2024
 
 // Com o call, referenciamos outro objetivo para atuar como THIS da função

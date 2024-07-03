@@ -43,25 +43,6 @@
 // Object.assign(moto, funcaoAutomovel);
 // Object.assign(carro, funcaoAutomovel);
 
-//Object.defineProperties()
-// Com esse método, consigo criar novas propriedades para um objeto (alvo).
-// Existe também o Object.defineProperty, para uma propriedade única.
-// const moto = {};
-// Object.defineProperties(moto, {
-//   rodas: {
-//     value: 2,
-//     configurable: false, // impede deletar e mudança de valor
-//     enumarable: true, // torna enumerável
-//     writable: true, // impede mudança de valor
-
-//   },
-//   capacete: {
-//     value: true,
-//     configurable: true,
-//     writable: false, // impede mudança de valor
-//   },
-// });
-
 // moto.rodas = 4;
 // delete moto.capacete;
 
@@ -99,13 +80,25 @@
 // console.log(String.prototype);
 // console.log(Array.prototype);
 
-let cars = [
-  { brand: "Fiat", year: 2022 },
-  { brand: "Bmw", year: 2018 },
-  { brand: "Ferrari", year: 2020 },
-];
-cars.sort();
+const funcaoAutomovel = {
+  acelerar() {
+    return "Acelerou";
+  },
+  buzinar() {
+    return "Buzinou";
+  },
+};
 
-console.log(cars);
-
-let test;
+const carro = {
+  portas: 4,
+  rodas: 4,
+  malas: true,
+};
+const moto = {
+  rodas: 2,
+  capacete: true,
+};
+const wa = "aa";
+function a() {}
+Object.assign(carro, funcaoAutomovel);
+console.log(carro);

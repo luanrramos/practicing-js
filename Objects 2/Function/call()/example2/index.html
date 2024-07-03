@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li class="ativo">Item 1</li>
+    <li>Item 2</li>
+    <li class="ativo">Item 3</li>
+    <li>Item 4</li>
+    <li class="ativo">Item 5</li>
+  </ul>
+
+  <script>
+    function ativarClasse(seletor) {
+      this.element = document.querySelector(seletor)
+    }
+
+    ativarClasse.prototype.ativar = function (classe) {
+      this.element.classList.add(classe);
+    }
+
+    const ul = new ativarClasse("ul")
+
+    const li = {
+      element: document.querySelector("li")
+    }
+
+    ativarClasse.prototype.ativar.call(li, "ativo");
+
+
+    const lis = document.querySelectorAll("li")
+
+    const arrayLis = Array.from(lis)
+    const filtrarLis = Array.prototype.filter.call(arrayLis, (item) => {
+      if (item.classList.contains("ativo")) {
+        return (item)
+      }
+
+    })
+
+
+
+    console.log(filtrarLis)
+  </script>
+</body>
+
+</html>
