@@ -38,6 +38,7 @@ function handleChange(event) {
   const value = event.target.value;
 
   handleStyle[name](value);
+  saveValues(name, value);
   showCss();
 }
 
@@ -46,4 +47,17 @@ function showCss() {
     "<span>" + btn.style.cssText.split("; ").join("</span> <span>");
 }
 
+function saveValues(name, value) {
+  localStorage[name] = value;
+}
+function setValue(name, value) {
+  const properties = Object.keys(localStorage);
+  console.log(properties);
+  properties.forEach((property) => {
+    handleStyle[property](localStorage[property]);
+    form.elements[property].value = localStorage[property];
+  });
+  showCss();
+}
+setValue();
 form.addEventListener("change", handleChange);
