@@ -52,7 +52,6 @@ function saveValues(name, value) {
 }
 function setValue(name, value) {
   const properties = Object.keys(localStorage);
-  console.log(properties);
   properties.forEach((property) => {
     handleStyle[property](localStorage[property]);
     form.elements[property].value = localStorage[property];
